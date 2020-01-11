@@ -13,8 +13,8 @@ set expandtab
 
 "colorscheme plastic 
 
-"visual selct word under cursor
-noremap <space> viw
+"visual select word under cursor
+nnoremap <space> viw
 
 " switch lines
 noremap - ddp
@@ -35,9 +35,21 @@ vnoremap <leader>e <esc>
 nnoremap <leader>vf :vsplit $MYVIMRC<cr>
 " source vimrc
 nnoremap <leader>svf :source $MYVIMRC<cr>
+" open bashrc
+nnoremap <leader>bash :e ~/.bashrc<cr>
+" open bash_aliases
+nnoremap <leader>alias :e ~/.bash_aliases<cr>
+
+" open file browser
+nnoremap <leader>m :Ex<cr>
+" exit buffer
+nnoremap <leader>x :bd<cr>
 
 " place quotes around word
 nnoremap <leader>' viw<esc>a"<esc>bi"<esc>lel
+
+" place semicolon at the end of a line
+nnoremap <leader>; ":execute normal! mqA;\<esc>`q"
 
 " good for fixing common typos
 iabbrev fucntion function
