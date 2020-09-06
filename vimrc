@@ -10,8 +10,9 @@ set number
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set suffixesadd=.js
 
-"colorscheme plastic 
+colorscheme Tomorrow-Night
 
 "visual select word under cursor
 nnoremap <space> viw
@@ -31,14 +32,21 @@ let maplocalleader = ","
 inoremap <leader>e <esc>
 vnoremap <leader>e <esc>
 
+" switch splits
+noremap <leader>s  <C-w>w
+noremap <leader>sl <C-w>l
+noremap <leader>sh <C-w>h
+noremap <leader>sj <C-w>j
+noremap <leader>sk <C-w>k
+
 " open vimrc
 nnoremap <leader>vf :vsplit $MYVIMRC<cr>
 " source vimrc
 nnoremap <leader>svf :source $MYVIMRC<cr>
 " open bashrc
-nnoremap <leader>bash :e ~/.bashrc<cr>
+nnoremap <leader>ba :e ~/.bashrc<cr>
 " open bash_aliases
-nnoremap <leader>alias :e ~/.bash_aliases<cr>
+nnoremap <leader>al :e ~/.bash_aliases<cr>
 
 " open file browser
 nnoremap <leader>m :Ex<cr>
