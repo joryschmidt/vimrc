@@ -3,21 +3,21 @@ noremap J 4j
 noremap K 4k
 noremap H 8h
 noremap L 8l 
-noremap mm J
-" }}}
+noremap mj J
+" }}} 
 
 set number
 set tabstop=2
 set shiftwidth=2
 set expandtab
 set suffixesadd=.js
-set ignorecase
 set autoindent
 
 colorscheme Tomorrow-Night
 
-"visual select word under cursor
-nnoremap <space> viw
+" insert new lines without moving or entering insert mode
+nnoremap <space>o moo<esc>`o
+nnoremap <space>O moO<esc>`o
 
 " easy visual block mode
 nnoremap vb <c-v>
@@ -26,7 +26,6 @@ nnoremap vb <c-v>
 nnoremap \ ,
 
 let mapleader = ","
-" local leader is usually different, and always use localleader for mappings in a plugin someone else might use
 let maplocalleader = ","
 
 " escape
@@ -35,10 +34,10 @@ vnoremap <leader>e <esc>
 
 " switch splits
 nnoremap <leader>sd <C-w>w
-nnoremap <leader>sl <C-w>l
 nnoremap <leader>sh <C-w>h
 nnoremap <leader>sj <C-w>j
 nnoremap <leader>sk <C-w>k
+nnoremap <leader>sl <C-w>l
 
 " resize split-
 nnoremap <leader>h <C-w><
@@ -62,14 +61,8 @@ nnoremap <leader>ba :e ~/.bashrc<cr>
 " open bash_aliases
 nnoremap <leader>al :e ~/.bash_aliases<cr>
 
-" place quotes around word
-nnoremap <leader>' viw<esc>a"<esc>bi"<esc>lel
-
-" place parentheses around WORD
-nnoremap <leader>( viW<esc>a)<esc>Bi(<esc>lEl
-
 " place semicolon at the end of a line
-" nnoremap <leader>; ":execute normal! mqA;\<esc>`q"
+nnoremap <leader>; ":execute normal! mqA;\<esc>`q"
 
 " good for fixing common typos
 iabbrev fucntion function
@@ -85,8 +78,10 @@ autocmd FileType python setlocal shiftwidth=4
 autocmd FileType mql4 setlocal tabstop=3
 autocmd FileType mql4 setlocal shiftwidth=3
 augroup END
+filetype plugin indent on
+syntax on
 
-" MQL4 syntax and NERDTree
+" Plugins
 execute pathogen#infect()
 
 " can use something like this for snippets
