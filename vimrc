@@ -39,15 +39,14 @@ nnoremap <leader>sj <C-w>j
 nnoremap <leader>sk <C-w>k
 nnoremap <leader>sl <C-w>l
 
-" resize split-
+" resize split
 nnoremap <leader>h <C-w><
 nnoremap <leader>l <C-w>>
 nnoremap <leader>j <C-w>+
 nnoremap <leader>k <C-w>-
 
-
-" toggle NERDtree
-noremap <leader>nt :NERDTreeToggle<cr>
+" make netrw tree default style
+let g:netrw_liststyle= 3
 
 " switch tabs
 nnoremap <C-\> gt
@@ -62,11 +61,11 @@ nnoremap <leader>ba :e ~/.bashrc<cr>
 nnoremap <leader>al :e ~/.bash_aliases<cr>
 
 " place semicolon at the end of a line
-nnoremap <leader>; ":execute normal! mqA;\<esc>`q"
+nnoremap <leader>; mqA;<esc>`q
 
 " good for fixing common typos
 iabbrev fucntion function
-iabbrev @@ codejory@gmail.com
+iabbrev @@ codejory@protonmail.com
 
 " add commenting a line file specifically with ,c
 augroup filePrefs
