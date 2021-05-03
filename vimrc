@@ -39,14 +39,20 @@ nnoremap <leader>sj <C-w>j
 nnoremap <leader>sk <C-w>k
 nnoremap <leader>sl <C-w>l
 
+nnoremap <silent> <C-h> <C-w>h
+nnoremap <silent> <C-j> <C-w>j
+" nnoremap <silent> <C-q> <C-w>k
+nnoremap <silent> <C-l> <C-w>l
+
 " resize split
-nnoremap <leader>h <C-w><
-nnoremap <leader>l <C-w>>
-nnoremap <leader>j <C-w>+
-nnoremap <leader>k <C-w>-
+nnoremap <leader>h 10<C-w><
+nnoremap <leader>l 10<C-w>>
+nnoremap <leader>j 5<C-w>+
+nnoremap <leader>k 5<C-w>-
+nnoremap <C-_> <C-w>_
 
 " make netrw tree default style
-let g:netrw_liststyle= 3
+let g:netrw_liststyle = 3
 
 " switch tabs
 nnoremap <C-\> gt
@@ -85,3 +91,17 @@ execute pathogen#infect()
 
 " can use something like this for snippets
 ":autocmd FileType javascript :iabbrev <buffer> iff if()<left>
+"
+"For coc
+let g:coc_disable_startup_warning = 1
+
+inoremap <silent><expr> <TAB>
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction

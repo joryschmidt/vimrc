@@ -1,9 +1,10 @@
 #System
 alias ..="cd .."
-alias l="ls -hAo --group-directories-first"
+alias ls="ls --color=auto -F"
+alias li="ls -hAo --group-directories-first"
 alias list="ls -hAl --group-directories-first"
 alias mem="free -m"
-alias disk="du -chd 1 "
+alias disk="du -chd 1"
 alias space="df -h --total"
 alias search="grep -Hirn --exclude-dir={node_modules,bower_components,.git,vendor,js,dist}"
 alias envy="printenv | grep -i"
@@ -18,8 +19,11 @@ alias vimit="cp ~/.vimrc ~/environment/vimrc/vimrc"
 #Python
 alias py="python3"
 alias pip="py -m pip"
-alias pyve="source ~/environment/freqtrade/.env/bin/activate"
+alias pyve="source ~/environment/machine_learning/.env/bin/activate"
+alias pyvefreq="source ~/environment/freqtrade/.env/bin/activate"
 alias pyvebook="source ~/environment/machine_learning/book/.venv/book/bin/activate"
+alias pyvefin="source ~/environment/finance/.env/bin/activate"
+alias pyvestack="source ~/environment/machine_learning/stack/.stackenv/bin/activate"
 
 #c9
 alias mysqldump="mysqldump --user=$C9_USER --host=$IP"
