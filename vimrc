@@ -44,6 +44,9 @@ nnoremap <silent> <C-j> <C-w>j
 " nnoremap <silent> <C-q> <C-w>k
 nnoremap <silent> <C-l> <C-w>l
 
+" swap split
+nnoremap <silent> <leader>ss <C-w>x
+
 " resize split
 nnoremap <leader>h 10<C-w><
 nnoremap <leader>l 10<C-w>>

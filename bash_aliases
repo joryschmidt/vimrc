@@ -1,7 +1,7 @@
 #System
 alias ..="cd .."
 alias ls="ls --color=auto -F"
-alias li="ls -hAo --group-directories-first"
+alias l="ls -hAo --group-directories-first"
 alias list="ls -hAl --group-directories-first"
 alias mem="free -m"
 alias disk="du -chd 1"
