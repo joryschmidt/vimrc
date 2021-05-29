@@ -15,15 +15,20 @@ set autoindent
 
 colorscheme Tomorrow-Night
 
-" insert new lines without moving or entering insert mode
+" insert new lines or chars without entering insert mode
 nnoremap <space>o moo<esc>`o
 nnoremap <space>O moO<esc>`o
+nnoremap <space>i  i_<esc>r
+nnoremap <space>a  a_<esc>r
 
 " easy visual block mode
 nnoremap vb <c-v>
 
 " reverse linewise search remap
 nnoremap \ ,
+
+" operator pending - to end of paragraph
+onoremap ep /^$<cr>
 
 let mapleader = ","
 let maplocalleader = ","

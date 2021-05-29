@@ -24,6 +24,7 @@ alias pyvefreq="source ~/environment/freqtrade/.env/bin/activate"
 alias pyvebook="source ~/environment/machine_learning/book/.venv/book/bin/activate"
 alias pyvefin="source ~/environment/finance/.env/bin/activate"
 alias pyvestack="source ~/environment/machine_learning/stack/.stackenv/bin/activate"
+alias pyvedata="source ~/environment/data_science/.dsenv/bin/activate"
 
 #c9
 alias mysqldump="mysqldump --user=$C9_USER --host=$IP"
