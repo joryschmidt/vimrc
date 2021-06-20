@@ -30,8 +30,15 @@ nnoremap \ ,
 " operator pending - to end of paragraph
 onoremap ep /^$<cr>
 
+" INSERT MODE MAPPINGS
 let mapleader = ","
 let maplocalleader = ","
+
+" move to end or beginning of line in insert mode
+inoremap <C-l> <C-o>$
+inoremap g<C-l> <C-o>^
+
+inoremap g<C-u> <C-u><esc>
 
 " escape
 inoremap <leader>e <esc>
